@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply font-poppins text-base xl:text-lg 2xl:text-xl
+}
+
+body {
+    @apply bg-woodsmoke-0 text-woodsmoke-950 dark:text-woodsmoke-0 dark:bg-woodsmoke-950
+}
+
+[data-page] {
+    @apply flex flex-col w-full min-h-screen
+}
+
+@layer components {
+    .icon {
+        @apply aspect-square w-6
+    }
+    .gridified {
+        @apply grid gap-4 grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12
+    }
+}
