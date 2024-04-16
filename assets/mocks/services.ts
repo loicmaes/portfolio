@@ -16,7 +16,7 @@ export const services: Service[] = [
       'Refonte graphique',
       'Refonte technique'
     ],
-    to: undefined
+    to: '/contact/service/web-development'
   },
   {
     name: 'Web design',
@@ -28,17 +28,16 @@ export const services: Service[] = [
       'Maquettes réactives',
       'Construction d\UI Kit'
     ],
-    to: undefined
+    to: '/contact/service/web-design'
   },
   {
-    name: 'Extras',
-    description: 'Un travail de qualité, des compétences confirmés mais je n’en suis pas spécialiste.',
+    name: 'Photographie',
+    description: 'De la lumière au papier, passer dans le miroir de mon appareil pour immortaliser tout événement.',
     features: [
-      'Développement mobile',
-      'Développement de bots',
-      'Création de plugins (Minecraft)',
-      'Création de logos'
+      'Animaux',
+      'Anniversaires',
+      'Mariages',
     ],
-    to: undefined
+    to: '/contact/service/photography'
   }
 ];
