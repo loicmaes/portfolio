@@ -18,7 +18,7 @@ const opened = ref<boolean>(false);
     </nav>
 
     <div class="header--cta-wrapper">
-      <CallToAction to="/">hello@maesloic.fr</CallToAction>
+      <CallToAction to="mailto:hello@maesloic.fr">hello@maesloic.fr</CallToAction>
     </div>
 
     <!-- MOBILE MENU -->
@@ -32,7 +32,7 @@ const opened = ref<boolean>(false);
         <NavigationLink @click="opened = false" to="/about">À propos</NavigationLink>
       </template>
       <template #bottom>
-        <CallToAction to="/">hello@maesloic.fr</CallToAction>
+        <CallToAction to="mailto:hello@maesloic.fr">hello@maesloic.fr</CallToAction>
       </template>
     </MobileMenu>
   </header>
