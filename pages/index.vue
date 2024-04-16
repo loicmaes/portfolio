@@ -36,7 +36,6 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
 
       <div class="hero__actions">
         <CallToAction>Besoin d'un développeur ?</CallToAction>
-        <CallToAction variant="secondary">Besoin d'un designer ?</CallToAction>
         <CallToAction :variant="CtaVariant.SECONDARY">Besoin d'un designer ?</CallToAction>
       </div>
     </section>
@@ -99,6 +98,12 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
 
 <style lang="sass" scoped>
 .home
+  .section
+    @apply px-8 py-20 md:px-12 lg:px-16 xl:px-[7.5rem]
+
+    &--title
+      @apply font-anton text-3xl
+
   .hero
     @apply relative h-screen flex flex-col justify-between items-center px-8 pt-32 pb-16 sm:justify-center sm:py-0
 
@@ -132,4 +137,47 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
 
     &__actions
       @apply flex flex-col gap-6 sm:flex-row sm:self-center sm:absolute sm:bottom-14
+
+  .projects
+    @apply flex flex-col gap-12
+
+    &__head
+      @apply flex flex-col gap-8 md:flex-row md:items-end md:justify-between
+
+      &--wrapper
+        @apply flex flex-col gap-4 md:max-w-[25rem]
+
+      &--caption
+        @apply text-woodsmoke-400 dark:text-woodsmoke-300 leading-relaxed
+
+      &--more
+        @apply justify-between
+
+    &--wrapper
+      @apply gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+
+  .clients
+    @apply flex flex-col gap-20 bg-woodsmoke-100 dark:bg-woodsmoke-900
+
+    &--wrapper
+      @apply flex flex-wrap gap-20
+
+    &--item
+      @apply h-10 opacity-45 dark:opacity-35 transition-opacity hover:opacity-100 dark:hover:opacity-100
+
+  .services
+    @apply flex flex-col gap-14
+
+    &--wrapper
+      @apply gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+
+  .testimonials
+    @apply flex flex-col gap-14
+
+    &__head
+      &--subtitle
+        @apply text-woodsmoke-300 dark:text-woodsmoke-500
+
+    &--wrapper
+      @apply gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4
 </style>
