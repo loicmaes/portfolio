@@ -22,12 +22,13 @@ defineProps<Props>();
 
 <template>
   <NuxtLink :to="to" class="button" :data-icon-position="iconPosition ?? 'none'" :data-variant="variant ?? 'primary'" v-if="to"><slot /></NuxtLink>
+  <a :href="to" class="button" :data-icon-position="iconPosition ?? 'non'" :data-variant="variant ?? 'primary'" :target="to.startsWith('http') ? '_blank' : '_self'" v-else-if="to && (to.startsWith('mailto') || to.startsWith('tel') || to.startsWith('http'))"><slot /></a>
   <button class="button" :data-icon-position="iconPosition ?? 'none'" :data-variant="variant ?? 'primary'" :type="submit ? 'submit' : 'button'" v-else><slot /></button>
 </template>
 
 <style scoped lang="sass">
 .button
-  @apply relative rounded-full w-full sm:w-max flex justify-center items-center font-medium isolate overflow-hidden before:absolute before:inset-[2px] before:rounded-full before:-z-10
+  @apply relative rounded-full gap-4 w-full sm:w-max flex justify-center items-center font-medium isolate overflow-hidden before:absolute before:inset-[2px] before:rounded-full before:-z-10
 
   &[data-variant="primary"]
     @apply before:bg-transparent before:transition-colors transition-colors bg-woodsmoke-950 dark:bg-woodsmoke-0 text-woodsmoke-0 dark:text-woodsmoke-950 hover:text-woodsmoke-950 hover:before:bg-woodsmoke-0 dark:hover:text-woodsmoke-0 dark:hover:before:bg-woodsmoke-950
