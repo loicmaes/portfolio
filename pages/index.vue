@@ -4,9 +4,11 @@ import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
 import IconArrowRight from "~/components/uikit/icons/arrows/IconArrowRight.vue";
 import ProjectCard from "~/components/locals/projects/ProjectCard.vue";
 import ServiceCard from "~/components/locals/services/ServiceCard.vue";
+import TestimonialCard from "~/components/locals/testimonials/TestimonialCard.vue";
 // Mocks
 import {projects} from '~/assets/mocks/projects';
 import {services} from '~/assets/mocks/services';
+import {testimonials} from '~/assets/mocks/testimonials';
 import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
 </script>
 
@@ -78,6 +80,20 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
       </div>
     </section>
 
+    <section class="section testimonials">
+      <header class="testimonials__head">
+        <p class="testimonials__head--subtitle">Témoignages</p>
+        <h2 class="section--title testimonials__head--title">VOUS en parlez le mieux !</h2>
+      </header>
+
+      <div class="testimonials--wrapper">
+        <TestimonialCard :mark="mark" :key="`quote-${index}`" v-for="({ author, mark, quote }, index) in testimonials">
+          <template #name>{{ author.name }}</template>
+          <template #society>{{ author.company }}</template>
+          <template #quote>{{ quote }}</template>
+        </TestimonialCard>
+      </div>
+    </section>
   </div>
 </template>
 
