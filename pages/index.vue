@@ -3,8 +3,10 @@ import NavigationLink from "~/components/uikit/buttons/NavigationLink.vue";
 import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
 import IconArrowRight from "~/components/uikit/icons/arrows/IconArrowRight.vue";
 import ProjectCard from "~/components/locals/projects/ProjectCard.vue";
+import ServiceCard from "~/components/locals/services/ServiceCard.vue";
 // Mocks
 import {projects} from '~/assets/mocks/projects';
+import {services} from '~/assets/mocks/services';
 import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
 </script>
 
@@ -65,6 +67,14 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
         <a href="https://www.inserm.fr/" target="_blank" class="clients--item">
           <svg class="clients--item" viewBox="0 0 190 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83148 0H12.3116V42.0223H1.83148V0Z" fill="currentColor"/><path d="M29.8124 42.0223V22.69C29.8124 20.9942 30.7485 17.6025 34.4928 17.6025C38.2372 17.6025 39.1055 20.9942 39.0715 22.69V42.0223H48.2289V19.7393C48.2968 16.3816 46.4992 9.78823 38.7663 10.2766C33.9841 10.7854 33.1701 11.2941 29.8124 14.4483V11.1924H20.655V42.0223H29.8124Z" fill="currentColor"/><path d="M81.399 14.6518L76.3116 19.7393C74.7854 18.62 72.2417 17.2973 69.1892 16.8903C66.1367 16.4833 63.3895 17.399 63.4913 19.1288C63.5895 20.7991 64.3519 20.9513 70.8176 22.2425C71.0476 22.2884 71.2848 22.3358 71.5294 22.3847C78.6518 23.8092 81.9078 26.4547 81.9078 32.1526C81.9078 37.8506 77.0238 42.531 67.0525 42.8363C59.0754 43.0804 53.6895 38.9359 51.9936 36.8331L57.6916 31.6439C61.7615 35.7138 66.1367 35.8156 66.7472 35.8156C67.3577 35.8156 72.5469 35.5103 72.5469 32.9666C72.5469 30.6326 69.2916 30.1832 65.4536 29.6533C65.1088 29.6057 64.7593 29.5575 64.407 29.5072C60.1335 28.8967 53.9269 26.5564 54.3339 20.3498C54.7409 14.1431 58.8108 10.3784 67.5612 10.0731C74.5615 9.82893 79.7032 13.0238 81.399 14.6518Z" fill="currentColor"/><path fill-rule="evenodd" clip-rule="evenodd" d="M94.5246 28.4897H116.604C117.147 22.3508 114.793 10.0731 101.037 10.0731C87.2801 10.0731 84.7907 22.0117 85.2655 27.9809C85.0281 33.1362 87.911 43.3857 101.342 43.1415C105.174 43.1415 113.592 41.3711 116.604 34.2893L109.38 31.3386C108.803 32.9327 106.45 36.1208 101.647 36.1208C95.6439 36.1208 94.5246 31.1351 94.5246 28.4897ZM94.6264 22.69H107.243C107.175 20.6211 105.839 16.4833 101.037 16.4833C96.234 16.4833 94.7621 20.6211 94.6264 22.69Z" fill="currentColor"/><path d="M121.692 42.0223H130.951V24.1145C130.951 20.0445 136.716 18.8914 139.599 18.8235V10.5819C135.122 10.5819 131.765 13.2273 130.645 14.5501V10.8871H121.692V42.0223Z" fill="currentColor"/><path d="M144.076 42.0223H153.132V22.9952C153.132 21.2316 154.027 17.7043 157.609 17.7043C161.19 17.7043 162.154 21.2316 162.188 22.9952V42.0223H171.243V22.9952C171.141 21.2316 171.935 17.7043 175.924 17.7043C179.912 17.7043 180.299 21.1638 180.299 22.9952V42.0223H189.355V18.4165C189.422 15.7032 187.604 10.2766 179.79 10.2766C175.395 10.2766 171.786 12.7186 170.531 13.9396C169.785 12.7186 167.01 10.2766 161.882 10.2766C156.754 10.2766 153.912 13.1256 153.132 14.5501V11.0906H144.076V42.0223Z" fill="currentColor"/><path d="M14.0413 56.9793C14.0413 60.8567 10.8981 64 7.02067 64C3.14326 64 0 60.8567 0 56.9793C0 53.1019 3.14326 49.9587 7.02067 49.9587C10.8981 49.9587 14.0413 53.1019 14.0413 56.9793Z" fill="#E74010"/></svg>
         </a>
+      </div>
+    </section>
+
+    <section class="section services">
+      <h2 class="section--title services--title">Un projet, Une idée,<br />Et si on collaborait ?</h2>
+
+      <div class="services--wrapper">
+        <ServiceCard :features="features" :name="name" :description="description" :to="to" v-for="{ name, description, features, to } in services" :key="name" />
       </div>
     </section>
 
