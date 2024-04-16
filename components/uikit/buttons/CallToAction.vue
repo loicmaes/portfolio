@@ -1,20 +1,12 @@
 <script setup lang="ts">
-enum Variant {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  TERTIARY = "tertiary"
-}
-enum IconPosition {
-  LEFT = 'left',
-  RIGHT = 'right',
-  ALONE = 'alone'
-}
+import {CtaIconPosition, type CtaVariant} from "assets/types/callToAction";
+
 type Props = {
   to?: string,
-  variant?: Variant,
+  variant?: CtaVariant,
   disabled?: boolean,
   submit?: boolean,
-  iconPosition?: IconPosition
+  iconPosition?: CtaIconPosition
 };
 
 defineProps<Props>();

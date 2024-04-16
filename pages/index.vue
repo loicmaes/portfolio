@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NavigationLink from "~/components/uikit/buttons/NavigationLink.vue";
 import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
+import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
 </script>
 
 <template>
@@ -28,6 +29,7 @@ import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
       <div class="hero__actions">
         <CallToAction>Besoin d'un développeur ?</CallToAction>
         <CallToAction variant="secondary">Besoin d'un designer ?</CallToAction>
+        <CallToAction :variant="CtaVariant.SECONDARY">Besoin d'un designer ?</CallToAction>
       </div>
     </section>
   </div>
