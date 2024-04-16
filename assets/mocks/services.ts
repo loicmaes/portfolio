@@ -27,7 +27,7 @@ export const services: Service[] = [
       'Refonte graphique',
       'Optimisation UI/UX',
       'Maquettes réactives',
-      'Construction d\UI Kit'
+      'Construction d\'UI Kit'
     ],
   },
   {
