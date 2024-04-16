@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import NavigationLink from "~/components/uikit/buttons/NavigationLink.vue";
 import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
+import IconArrowRight from "~/components/uikit/icons/arrows/IconArrowRight.vue";
+import ProjectCard from "~/components/locals/projects/ProjectCard.vue";
+// Mocks
+import {projects} from '~/assets/mocks/projects';
 import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
 </script>
 
@@ -30,6 +34,24 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
         <CallToAction>Besoin d'un développeur ?</CallToAction>
         <CallToAction variant="secondary">Besoin d'un designer ?</CallToAction>
         <CallToAction :variant="CtaVariant.SECONDARY">Besoin d'un designer ?</CallToAction>
+      </div>
+    </section>
+
+    <section class="section projects">
+      <header class="projects__head">
+        <div class="projects__head--wrapper">
+          <h2 class="section--title projects__head--title">Projets récents</h2>
+          <p class="projects__head--caption">Découvre ma passion et mon expertise pour une expérience inoubliable. Avec mes compétences confirmées, je m'engage à te proposer une expérience exceptionnelle à chaque étape de ton parcours avec moi.</p>
+        </div>
+
+        <CallToAction :icon-position="CtaIconPosition.RIGHT" :variant="CtaVariant.SECONDARY" class="projects__head--more">
+          <span>En voir plus</span>
+          <IconArrowRight />
+        </CallToAction>
+      </header>
+
+      <div class="projects--wrapper">
+        <ProjectCard class="projects--item" :thumbnail="thumbnail" :client="client" :project="{ name, description, tags }" v-for="{ thumbnail, client, name, description, tags } in projects" :key="name" />
       </div>
     </section>
   </div>
