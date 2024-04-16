@@ -33,7 +33,7 @@ export const services: Service[] = [
   {
     id: 'photography',
     name: 'Photographie',
-    description: 'De la lumière au papier, passer dans le miroir de mon appareil pour immortaliser tout événement.',
+    description: 'De la lumière au papier, passe dans le miroir de mon appareil pour immortaliser tout événement.',
     features: [
       'Animaux',
       'Anniversaires',
