@@ -48,7 +48,7 @@ import IconEnvelope from "~/components/uikit/icons/contact/IconEnvelope.vue";
       </ul>
     </section>
 
-    <BottomMenuSection>
+    <BottomMenuSection id="section-1">
       <template #title>Réseaux</template>
       <template #content>
         <NavigationLink to="https://www.linkedin.com/in/maesloic" external>LinkedIn</NavigationLink>
@@ -57,13 +57,13 @@ import IconEnvelope from "~/components/uikit/icons/contact/IconEnvelope.vue";
         <NavigationLink to="https://www.youtube.com/" external>YouTube</NavigationLink>
       </template>
     </BottomMenuSection>
-    <BottomMenuSection>
+    <BottomMenuSection id="section-2">
       <template #title>Produits</template>
       <template #content>
         <p class="opacity-30">A venir...</p>
       </template>
     </BottomMenuSection>
-    <BottomMenuSection>
+    <BottomMenuSection id="section-3">
       <template #title>Documents</template>
       <template #content>
         <NavigationLink to="">Mentions légales</NavigationLink>
@@ -81,6 +81,9 @@ import IconEnvelope from "~/components/uikit/icons/contact/IconEnvelope.vue";
 <style scoped lang="sass">
 .footer
   @apply relative px-8 py-20 md:px-12 lg:px-16 xl:px-[7.5rem] gap-x-4 gap-y-12 md:gap-y-8 bg-woodsmoke-100 dark:bg-woodsmoke-900
+
+  #section-1
+    @apply 2xl:col-start-7
 
   &__hero
     @apply flex flex-col gap-4 col-span-4 md:col-span-6 lg:col-span-4
@@ -101,10 +104,10 @@ import IconEnvelope from "~/components/uikit/icons/contact/IconEnvelope.vue";
         @apply text-woodsmoke-400
 
   &--separator
-    @apply border-none h-[2px] w-full bg-woodsmoke-200 dark:bg-woodsmoke-800 col-span-4 md:col-span-6 lg:col-span-8 xl:col-span-12
+    @apply border-none h-[2px] w-full bg-woodsmoke-200 dark:bg-woodsmoke-800 col-span-4 md:col-span-6 lg:col-span-8 xl:col-span-10 2xl:col-span-12
 
   &--info
-    @apply text-woodsmoke-400 col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-5
+    @apply text-woodsmoke-400 col-span-4 md:col-span-3 lg:col-span-4 xl:col-span-5 2xl:col-span-6
 
     &:nth-child(odd)
       @apply md:text-end
