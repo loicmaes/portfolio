@@ -2,14 +2,10 @@
 import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
 import IconArrowRight from "~/components/uikit/icons/arrows/IconArrowRight.vue";
 import IconChevronRight from "~/components/uikit/icons/arrows/IconChevronRight.vue";
+import type {Service} from "assets/mocks/services";
+import {CtaIconPosition} from "assets/types/callToAction";
 
-type Props = {
-  name: string,
-  description: string,
-  features: string[],
-  to?: string
-};
-defineProps<Props>();
+defineProps<Service>();
 </script>
 
 <template>
@@ -31,7 +27,7 @@ defineProps<Props>();
     </main>
 
     <footer class="card__foot">
-      <CallToAction class="card__foot--cta" icon-position="right" :to="to">
+      <CallToAction class="card__foot--cta" :icon-position="CtaIconPosition.RIGHT" :to="`/contact/service/${id}`">
         <span>Prendre contact</span>
         <IconArrowRight />
       </CallToAction>

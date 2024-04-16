@@ -1,12 +1,13 @@
 export interface Service {
+  id: string;
   name: string;
   description: string;
   features: string[];
-  to?: string;
 }
 
 export const services: Service[] = [
   {
+    id: 'web-development',
     name: 'Développement Web',
     description: 'De l’idée au concret, je m’occupe de tout le développement et du déploiement de TON site !',
     features: [
@@ -16,9 +17,9 @@ export const services: Service[] = [
       'Refonte graphique',
       'Refonte technique'
     ],
-    to: '/contact/service/web-development'
   },
   {
+    id: 'web-design',
     name: 'Web design',
     description: 'Du rêve au papier, j’imagine, dessine, conseille et intervient sur tes projets les plus fous !',
     features: [
@@ -28,9 +29,9 @@ export const services: Service[] = [
       'Maquettes réactives',
       'Construction d\UI Kit'
     ],
-    to: '/contact/service/web-design'
   },
   {
+    id: 'photography',
     name: 'Photographie',
     description: 'De la lumière au papier, passer dans le miroir de mon appareil pour immortaliser tout événement.',
     features: [
@@ -38,6 +39,5 @@ export const services: Service[] = [
       'Anniversaires',
       'Mariages',
     ],
-    to: '/contact/service/photography'
   }
 ];
