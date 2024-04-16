@@ -1,20 +1,7 @@
 <script setup lang="ts">
-type Props = {
-  thumbnail: {
-    src: string,
-    alt?: string,
-  },
-  client: {
-    name: string,
-    country: string
-  },
-  project: {
-    name: string,
-    description: string,
-    tags: string[]
-  }
-}
-defineProps<Props>();
+import type {Project} from "assets/mocks/projects";
+
+defineProps<Project>();
 </script>
 
 <template>
@@ -22,12 +9,12 @@ defineProps<Props>();
     <img :src="thumbnail.src" :alt="thumbnail.alt ?? ''" class="card--thumbnail" />
 
     <p class="card--client">{{ client.name }} · {{ client.country }}</p>
-    <h3 class="card--title">{{ project.name }}</h3>
+    <h3 class="card--title">{{ name }}</h3>
 
-    <p class="card--caption">{{ project.description }}</p>
+    <p class="card--caption">{{ description }}</p>
 
-    <ul class="card__tags" v-if="project.tags?.length">
-      <li class="card__tags--item" v-for="tag in project.tags" :key="tag">{{ tag }}</li>
+    <ul class="card__tags" v-if="tags?.length">
+      <li class="card__tags--item" v-for="tag in tags" :key="tag">{{ tag }}</li>
     </ul>
   </article>
 </template>

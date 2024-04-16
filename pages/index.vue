@@ -54,7 +54,7 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
       </header>
 
       <div class="projects--wrapper">
-        <ProjectCard class="projects--item" :thumbnail="thumbnail" :client="client" :project="{ name, description, tags }" v-for="{ thumbnail, client, name, description, tags } in projects" :key="name" />
+        <ProjectCard class="projects--item" :name="name" :description="description" :tags="tags" :thumbnail="thumbnail" :client="client" v-for="{ thumbnail, client, name, description, tags } in projects" :key="name" />
       </div>
     </section>
 
@@ -75,7 +75,7 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
       <h2 class="section--title services--title">Un projet, Une idée,<br />Et si on collaborait ?</h2>
 
       <div class="services--wrapper">
-        <ServiceCard :features="features" :name="name" :description="description" :to="to" v-for="{ name, description, features, to } in services" :key="name" />
+        <ServiceCard :features="features" :name="name" :description="description" :id="id" v-for="{ name, description, features, id } in services" :key="name" />
       </div>
     </section>
 
