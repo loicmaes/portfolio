@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <h1>About</h1>
+  <div data-page class="about">
+    <!-- TODO: implement about page -->
+  </div>
 </template>
 
 <style scoped lang="sass">

@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <h1>Projects</h1>
+  <div data-page class="projects">
+    <!-- TODO: implement projects page -->
+  </div>
 </template>
 
 <style scoped lang="sass">
