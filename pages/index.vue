@@ -2,9 +2,9 @@
 import NavigationLink from "~/components/uikit/buttons/NavigationLink.vue";
 import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
 import IconArrowRight from "~/components/uikit/icons/arrows/IconArrowRight.vue";
-import ProjectCard from "~/components/locals/projects/ProjectCard.vue";
-import ServiceCard from "~/components/locals/services/ServiceCard.vue";
-import TestimonialCard from "~/components/locals/testimonials/TestimonialCard.vue";
+import ProjectCard from "~/components/locals/home/projects/ProjectCard.vue";
+import ServiceCard from "~/components/locals/home/services/ServiceCard.vue";
+import TestimonialCard from "~/components/locals/home/testimonials/TestimonialCard.vue";
 // Mocks
 import {projects} from '~/assets/mocks/projects';
 import {services} from '~/assets/mocks/services';
