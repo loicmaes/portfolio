@@ -1,12 +1,4 @@
-export interface TestimonialAuthor {
-  name: string;
-  company: string;
-}
-export interface Testimonial {
-  author: TestimonialAuthor;
-  mark: number;
-  quote: string;
-}
+import type {Testimonial} from "assets/types/testimonials";
 
 export const testimonials: Testimonial[] = [
   {

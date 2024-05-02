@@ -80,7 +80,7 @@ import IconEnvelope from "~/components/uikit/icons/contact/IconEnvelope.vue";
 
 <style scoped lang="sass">
 .footer
-  @apply relative px-8 py-20 md:px-12 lg:px-16 xl:px-[7.5rem] gap-x-4 gap-y-12 md:gap-y-8 bg-woodsmoke-100 dark:bg-woodsmoke-900
+  @apply relative z-10 px-8 py-20 md:px-12 lg:px-16 xl:px-[7.5rem] gap-x-4 gap-y-12 md:gap-y-8 bg-woodsmoke-100 dark:bg-woodsmoke-900
 
   #section-1
     @apply 2xl:col-start-7

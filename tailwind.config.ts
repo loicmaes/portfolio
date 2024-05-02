@@ -33,6 +33,13 @@ export default {
           '900': '#6B3923',
           '950': '#391C11',
         }
+      },
+      fontSize: {
+        '4exl': '2.5rem',
+        '6exl': '4rem',
+        '7exl': '5.5rem',
+        '9exl': '9rem',
+        '10xl': '10rem'
       }
     }
   },
