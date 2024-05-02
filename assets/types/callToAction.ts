@@ -8,3 +8,7 @@ export enum CtaIconPosition {
   RIGHT = 'right',
   ALONE = 'alone'
 }
+export enum CtaStaticTheme {
+  LIGHT = 'light',
+  DARK = 'dark'
+}
