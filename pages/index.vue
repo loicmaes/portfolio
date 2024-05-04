@@ -47,7 +47,7 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
           <p class="projects__head--caption">Découvre ma passion et mon expertise pour une expérience inoubliable. Avec mes compétences confirmées, je m'engage à te proposer une expérience exceptionnelle à chaque étape de ton parcours avec moi.</p>
         </div>
 
-        <CallToAction :icon-position="CtaIconPosition.RIGHT" :variant="CtaVariant.SECONDARY" class="projects__head--more">
+        <CallToAction to="/projects" :icon-position="CtaIconPosition.RIGHT" :variant="CtaVariant.SECONDARY" class="projects__head--more">
           <span>En voir plus</span>
           <IconArrowRight />
         </CallToAction>
