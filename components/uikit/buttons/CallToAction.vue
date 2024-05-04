@@ -27,9 +27,9 @@ defineProps<Props>();
     @apply before:bg-transparent before:transition-colors transition-colors bg-woodsmoke-950 dark:bg-woodsmoke-0 text-woodsmoke-0 dark:text-woodsmoke-950 hover:text-woodsmoke-950 hover:before:bg-woodsmoke-0 dark:hover:text-woodsmoke-0 dark:hover:before:bg-woodsmoke-950
 
     &.static-light
-      @apply bg-woodsmoke-950 text-woodsmoke-0
+      @apply bg-woodsmoke-950 text-woodsmoke-0 hover:text-woodsmoke-950 hover:before:bg-woodsmoke-0
     &.static-dark
-      @apply bg-woodsmoke-0 text-woodsmoke-950
+      @apply bg-woodsmoke-0 text-woodsmoke-950 hover:text-woodsmoke-0 hover:before:bg-woodsmoke-950
 
   &[data-variant="secondary"]
     @apply bg-gradient-to-br from-woodsmoke-100 dark:from-woodsmoke-800 to-woodsmoke-0 dark:to-woodsmoke-950 before:bg-woodsmoke-0 dark:before:bg-woodsmoke-950 after:absolute after:h-4 after:w-[60%] after:rounded-full after:blur-xl after:transition-transform after:left-[50%] after:translate-x-[-50%] after:translate-y-3 after:top-[100%] after:bg-woodsmoke-200 dark:after:bg-woodsmoke-500 hover:after:translate-y-0
@@ -44,5 +44,5 @@ defineProps<Props>();
     @apply py-4 pl-8 pr-4
 
   &.disabled
-    @apply [pointer-events:none] opacity-50 dark:opacity-40
+    @apply pointer-events-none opacity-50 dark:opacity-40
 </style>
