@@ -9,7 +9,7 @@ import TestimonialCard from "~/components/locals/home/testimonials/TestimonialCa
 import {projects} from '~/assets/mocks/projects';
 import {services} from '~/assets/mocks/services';
 import {testimonials} from '~/assets/mocks/testimonials';
-import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
+import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
 </script>
 
 <template>

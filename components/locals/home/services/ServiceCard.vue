@@ -3,7 +3,7 @@ import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
 import IconArrowRight from "~/components/uikit/icons/arrows/IconArrowRight.vue";
 import IconChevronRight from "~/components/uikit/icons/arrows/IconChevronRight.vue";
 import type {Service} from "assets/mocks/services";
-import {CtaIconPosition} from "assets/types/callToAction";
+import {CtaIconPosition} from "assets/types/callToAction.types";
 
 defineProps<Service>();
 </script>

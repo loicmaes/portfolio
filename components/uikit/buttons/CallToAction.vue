@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {CtaIconPosition, CtaStaticTheme, type CtaVariant} from "assets/types/callToAction";
+import {CtaIconPosition, CtaStaticTheme, type CtaVariant} from "assets/types/callToAction.types";
 
 type Props = {
   to?: string,
@@ -14,9 +14,9 @@ defineProps<Props>();
 </script>
 
 <template>
-  <NuxtLink :to="to" class="button" :class="`static-${static}`" :data-icon-position="iconPosition ?? 'none'" :data-variant="variant ?? 'primary'" v-if="to"><slot /></NuxtLink>
-  <a :href="to" class="button" :class="`static-${static}`" :data-icon-position="iconPosition ?? 'non'" :data-variant="variant ?? 'primary'" :target="to.startsWith('http') ? '_blank' : '_self'" v-else-if="to && (to.startsWith('mailto') || to.startsWith('tel') || to.startsWith('http'))"><slot /></a>
-  <button class="button" :class="`static-${static}`" :data-icon-position="iconPosition ?? 'none'" :data-variant="variant ?? 'primary'" :type="submit ? 'submit' : 'button'" v-else><slot /></button>
+  <NuxtLink :to="to" class="button" :class="{ 'static-light': static === CtaStaticTheme.LIGHT, 'static-dark': static === CtaStaticTheme.DARK, disabled }" :data-icon-position="iconPosition ?? 'none'" :data-variant="variant ?? 'primary'" v-if="to"><slot /></NuxtLink>
+  <a :href="to" class="button" :class="{ 'static-light': static === CtaStaticTheme.LIGHT, 'static-dark': static === CtaStaticTheme.DARK, disabled }" :data-icon-position="iconPosition ?? 'non'" :data-variant="variant ?? 'primary'" :target="to.startsWith('http') ? '_blank' : '_self'" v-else-if="to && (to.startsWith('mailto') || to.startsWith('tel') || to.startsWith('http'))"><slot /></a>
+  <button class="button" :class="{ 'static-light': static === CtaStaticTheme.LIGHT, 'static-dark': static === CtaStaticTheme.DARK, disabled }" :data-icon-position="iconPosition ?? 'none'" :data-variant="variant ?? 'primary'" :type="submit ? 'submit' : 'button'" v-else><slot /></button>
 </template>
 
 <style scoped lang="sass">
@@ -42,4 +42,7 @@ defineProps<Props>();
     @apply py-4 pl-4 pr-8
   &[data-icon-position="right"]
     @apply py-4 pl-8 pr-4
+
+  &.disabled
+    @apply [pointer-events:none] opacity-50 dark:opacity-40
 </style>
