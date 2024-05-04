@@ -3,12 +3,17 @@ import {projects} from "assets/mocks/projects";
 import IconArrowLeft from "~/components/uikit/icons/arrows/IconArrowLeft.vue";
 import {useDateFormat} from "assets/scripts/hooks/date";
 import {DateFormat} from "assets/types/dateHook.types";
+import Callout from "~/components/uikit/Callout.vue";
+import type { Callout as CalloutType } from 'assets/types/projectContent.types';
+import {SectionType} from 'assets/types/projectContent.types';
+import Paragraph from "~/components/uikit/Paragraph.vue";
+import type { Paragraph as ParagraphType } from 'assets/types/projectContent.types';
 
 definePageMeta({
   layout: 'project-watcher'
 });
 
-const { name, description, tags, client, thumbnail, uuid, createdAt } = projects.find(({ uuid }) => uuid === useRoute().params.uuid) || projects[0];
+const { name, description, tags, client, thumbnail, uuid, createdAt, content } = projects.find(({ uuid }) => uuid === useRoute().params.uuid) || projects[0];
 const date    = useDateFormat(createdAt || new Date(), {
   format: DateFormat.SHORT_TEXT
 });
@@ -71,9 +76,16 @@ if (process.browser) {
           <p class="head--description">{{ description }}</p>
         </section>
 
-        <hr class="project--separator" />
-
-        <section class="project__section outline outline-red-500 p-12"></section>
+        <section class="project__section" v-for="(section, index) in content" :key="`section-${index}`">
+          <hr class="project--separator" v-if="section.type === SectionType.SEPARATOR" />
+          <Callout v-if="section.type === SectionType.CALLOUT">
+            <template #content>{{ (section as CalloutType).content }}</template>
+          </Callout>
+          <Paragraph v-if="section.type === SectionType.PARAGRAPH" :no-title="!(section as ParagraphType).title">
+            <template #title v-if="(section as ParagraphType).title">{{ (section as ParagraphType).title }}</template>
+            <template #content>{{ (section as ParagraphType).content }}</template>
+          </Paragraph>
+        </section>
       </div>
     </main>
   </article>
@@ -113,5 +125,5 @@ if (process.browser) {
     @apply w-max max-w-full pt-8 pb-4 text-4xl lg:text-5xl 2xl:text-6xl font-black bg-gradient-to-r from-woodsmoke-950 dark:from-woodsmoke-0 to-woodsmoke-500 dark:to-woodsmoke-400 text-transparent bg-clip-text
 
   &--description
-    @apply text-woodsmoke-500 dark:text-woodsmoke-500
+    @apply leading-loose text-woodsmoke-500
 </style>
