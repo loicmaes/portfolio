@@ -1,4 +1,4 @@
-import type {Testimonial} from "assets/types/testimonials";
+import type {Testimonial} from "assets/types/testimonials.types";
 
 export const testimonials: Testimonial[] = [
   {

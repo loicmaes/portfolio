@@ -1,4 +1,4 @@
-import type {Service} from "assets/types/services";
+import type {Service} from "assets/types/services.types";
 
 export const services: Service[] = [
   {
