@@ -16,12 +16,17 @@ defineProps<Project>();
     <ul class="card__tags" v-if="tags?.length">
       <li class="card__tags--item" v-for="tag in tags" :key="tag">{{ tag }}</li>
     </ul>
+
+    <NuxtLink :to="`/projects/watch/${uuid}`" class="card--link" />
   </article>
 </template>
 
 <style scoped lang="sass">
 .card
   @apply isolate bg-gradient-to-br from-woodsmoke-100 dark:from-woodsmoke-700 to-woodsmoke-0 dark:to-woodsmoke-900 rounded-3xl p-4 flex flex-col relative before:absolute before:inset-[2px] before:-z-10 before:bg-woodsmoke-0 dark:before:bg-woodsmoke-900 before:rounded-[1.4rem]
+
+  &--link
+    @apply absolute inset-0
 
   &--thumbnail
     @apply rounded-lg w-full h-36 object-cover

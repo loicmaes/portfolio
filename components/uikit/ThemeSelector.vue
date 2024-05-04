@@ -2,22 +2,21 @@
 import IconSun from "~/components/uikit/icons/environment/IconSun.vue";
 import IconMoon from "~/components/uikit/icons/environment/IconMoon.vue";
 import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
+import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
 
 const colorMode = useColorMode();
 const theme = ref<string>();
 
-if (process.browser) {
-  switch (colorMode.preference) {
-    case 'system':
-      theme.value = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark': 'light';
-      break;
-    default:
-      theme.value = 'light';
-      break;
-    case 'dark':
-      theme.value = 'dark';
-      break;
-  }
+switch (colorMode.preference) {
+  case 'system':
+    theme.value = window?.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark': 'light';
+    break;
+  default:
+    theme.value = 'light';
+    break;
+  case 'dark':
+    theme.value = 'dark';
+    break;
 }
 const switchTheme = () => {
   switch (theme.value) {
@@ -34,7 +33,7 @@ const switchTheme = () => {
 
 <template>
   <ClientOnly>
-    <CallToAction class="theme-switcher" @click.prevent="switchTheme" variant="secondary" icon-position="alone">
+    <CallToAction class="theme-switcher" @click.prevent="switchTheme" :variant="CtaVariant.SECONDARY" :icon-position="CtaIconPosition.ALONE">
       <IconSun v-if="colorMode.preference === 'light'" />
       <IconMoon v-if="colorMode.preference === 'dark'" />
     </CallToAction>

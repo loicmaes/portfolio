@@ -7,9 +7,11 @@ export interface ProjectClient {
   country: string;
 }
 export interface Project {
+  uuid: string;
   name: string;
   description: string;
   tags: string[];
   thumbnail: ProjectThumbnail;
   client: ProjectClient;
+  createdAt?: Date;
 }

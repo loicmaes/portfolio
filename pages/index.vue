@@ -9,7 +9,7 @@ import TestimonialCard from "~/components/locals/home/testimonials/TestimonialCa
 import {projects} from '~/assets/mocks/projects';
 import {services} from '~/assets/mocks/services';
 import {testimonials} from '~/assets/mocks/testimonials';
-import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
+import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
 </script>
 
 <template>
@@ -47,14 +47,14 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction";
           <p class="projects__head--caption">Découvre ma passion et mon expertise pour une expérience inoubliable. Avec mes compétences confirmées, je m'engage à te proposer une expérience exceptionnelle à chaque étape de ton parcours avec moi.</p>
         </div>
 
-        <CallToAction :icon-position="CtaIconPosition.RIGHT" :variant="CtaVariant.SECONDARY" class="projects__head--more">
+        <CallToAction to="/projects" :icon-position="CtaIconPosition.RIGHT" :variant="CtaVariant.SECONDARY" class="projects__head--more">
           <span>En voir plus</span>
           <IconArrowRight />
         </CallToAction>
       </header>
 
       <div class="projects--wrapper">
-        <ProjectCard class="projects--item" :name="name" :description="description" :tags="tags" :thumbnail="thumbnail" :client="client" v-for="{ thumbnail, client, name, description, tags } in projects" :key="name" />
+        <ProjectCard class="projects--item" :uuid="uuid" :name="name" :description="description" :tags="tags" :thumbnail="thumbnail" :client="client" v-for="{ uuid, thumbnail, client, name, description, tags } in projects" :key="name" />
       </div>
     </section>
 
