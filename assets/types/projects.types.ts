@@ -13,4 +13,5 @@ export interface Project {
   tags: string[];
   thumbnail: ProjectThumbnail;
   client: ProjectClient;
+  createdAt?: Date;
 }

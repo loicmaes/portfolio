@@ -16,7 +16,8 @@ export const projects: Project[] = [
     },
     thumbnail: {
       src: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2840&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    }
+    },
+    createdAt: new Date(2024, 2, 27)
   },
   {
     uuid: 'optimisation-ux-de-la-navigation',
@@ -33,7 +34,8 @@ export const projects: Project[] = [
     },
     thumbnail: {
       src: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?q=80&w=2826&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    }
+    },
+    createdAt: new Date(2024, 3, 7)
   },
   {
     uuid: 'generateur-davis-de-valeur',
@@ -50,6 +52,7 @@ export const projects: Project[] = [
     },
     thumbnail: {
       src: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2746&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    }
+    },
+    createdAt: new Date(2022, 4, 12)
   }
 ];
