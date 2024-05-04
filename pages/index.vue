@@ -54,7 +54,7 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
       </header>
 
       <div class="projects--wrapper">
-        <ProjectCard class="projects--item" :name="name" :description="description" :tags="tags" :thumbnail="thumbnail" :client="client" v-for="{ thumbnail, client, name, description, tags } in projects" :key="name" />
+        <ProjectCard class="projects--item" :uuid="uuid" :name="name" :description="description" :tags="tags" :thumbnail="thumbnail" :client="client" v-for="{ uuid, thumbnail, client, name, description, tags } in projects" :key="name" />
       </div>
     </section>
 

@@ -30,7 +30,7 @@ const changePage = async (value: number) => {
           <IconTwoSliders />
         </CallToAction>
       </header>
-      <ProjectCard class="projects--item" :name="name" :description="description" :tags="tags" :thumbnail="thumbnail" :client="client" v-for="{ thumbnail, client, name, description, tags } in projectList" :key="name" />
+      <ProjectCard class="projects--item" :uuid="uuid" :name="name" :description="description" :tags="tags" :thumbnail="thumbnail" :client="client" v-for="{ uuid, thumbnail, client, name, description, tags } in projectList" :key="name" />
       <Pagination class="projects--pagination" :per-page="perPage" :elements="projects.length" :current="currentPage" @updated="changePage" v-if="projects.length && projects.length > perPage" />
     </div>
   </div>

@@ -2,6 +2,7 @@ import type {Project} from "assets/types/projects.types";
 
 export const projects: Project[] = [
   {
+    uuid: 'portfolio',
     name: 'Portfolio',
     description: 'Design et mise en place d’un site vitrine pour la présentation de mes projets, de mes compétences, de mes réseaux sociaux mais également pour un gage de qualité et de présentation de mes services.',
     tags: [
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     }
   },
   {
+    uuid: 'optimisation-ux-de-la-navigation',
     name: 'Optimisation UX de la navigation',
     description: 'Modification de l’existant en optimisant et améliorant l’UX du système de navigation au sein de l’application domotique mise en place par le client.',
     tags: [
@@ -34,6 +36,7 @@ export const projects: Project[] = [
     }
   },
   {
+    uuid: 'generateur-davis-de-valeur',
     name: 'Générateur d’avis de valeur',
     description: 'Conception et réalisation d’une web app interne permettant la génération d’avis de valeur pour l’agence et l’accélération du processus d’estimation d’un bien.',
     tags: [
