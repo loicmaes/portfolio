@@ -4,10 +4,10 @@ import IconArrowLeft from "~/components/uikit/icons/arrows/IconArrowLeft.vue";
 import {useDateFormat} from "assets/scripts/hooks/date";
 import {DateFormat} from "assets/types/dateHook.types";
 import Callout from "~/components/uikit/Callout.vue";
-import type { Callout as CalloutType } from 'assets/types/projectContent.types';
-import {SectionType} from 'assets/types/projectContent.types';
 import Paragraph from "~/components/uikit/Paragraph.vue";
-import type { Paragraph as ParagraphType } from 'assets/types/projectContent.types';
+import Image from "~/components/uikit/Image.vue";
+import { SectionType } from 'assets/types/projectContent.types';
+import type { Callout as CalloutType, Paragraph as ParagraphType, Image as ImageType } from 'assets/types/projectContent.types';
 
 definePageMeta({
   layout: 'project-watcher'
@@ -85,6 +85,7 @@ if (process.browser) {
             <template #title v-if="(section as ParagraphType).title">{{ (section as ParagraphType).title }}</template>
             <template #content>{{ (section as ParagraphType).content }}</template>
           </Paragraph>
+          <Image v-if="section.type === SectionType.IMAGE" :src="(section as ImageType).src" :caption="(section as ImageType).caption" />
         </section>
       </div>
     </main>

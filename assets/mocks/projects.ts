@@ -37,13 +37,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, ut?`,
         type: SectionType.SEPARATOR,
       },
       {
-        type: SectionType.PARAGRAPH,
-        title: 'Découvrez la puissance d\'un portfolio',
-        content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at dolores inventore ipsa iusto nostrum placeat sapiente! Accusamus, amet beatae blanditiis consequuntur debitis doloremque earum esse facere id illo inventore ipsa nihil nisi non nostrum omnis pariatur quam quo recusandae reprehenderit repudiandae temporibus ullam voluptate? Et eum maxime minima odit optio quisquam repellendus sunt? Ad deleniti eaque excepturi? Assumenda aut debitis dolore est et expedita fugit impedit itaque iure maxime minima nobis, quibusdam sapiente voluptatibus.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolorum ea earum ex fugiat laudantium molestiae mollitia quia quisquam totam.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, ut?`,
+        type: SectionType.IMAGE,
+        src: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        caption: 'Tour du bureau',
       },
     ]
   },
