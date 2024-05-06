@@ -1,8 +1,5 @@
 export default defineNuxtConfig({
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode'
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', "@nuxt/image"],
   app: {
     head: {
       charset: 'utf-8',
