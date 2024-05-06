@@ -67,7 +67,7 @@ import IconEnvelope from "~/components/uikit/icons/contact/IconEnvelope.vue";
       <template #title>Documents</template>
       <template #content>
         <NavigationLink to="/legal/legal-mentions">Mentions légales</NavigationLink>
-        <NavigationLink to="">Curiculum Vitae</NavigationLink>
+        <NavigationLink to="" v-if="false">Curiculum Vitae</NavigationLink>
       </template>
     </BottomMenuSection>
 
