@@ -13,4 +13,7 @@ defineProps<Props>();
 
 <style scoped lang="sass">
 @forward './style'
+
+.list
+  @apply list-decimal
 </style>
