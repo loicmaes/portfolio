@@ -1,75 +1,14 @@
-# Nuxt 3 Minimal Starter
+# Portfolio Frontend
+Welcome to the GitHub repository of my personal portfolio frontend! This project aims to create an online showcase to present my skills, projects, and professional background.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-## Setup
+## Technical Stack
+This frontend has been developed using the following technologies:
+- **NuxtJS**: Vue.js framework for building universal web applications.
+- **Vue.js 3**: A progressive JavaScript library for building user interfaces.
+- **Composition API**: A new API introduced in Vue.js 3 for more flexible and intuitive management of component state and behavior.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs with minimal CSS.
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+> Crafted with ❤️ by [**Loïc MAES**](https://www.maesloic.fr/) in 2024
