@@ -87,7 +87,7 @@ if (process.browser) {
             <template #content>{{ (section as ParagraphType).content }}</template>
           </Paragraph>
           <Image v-if="section.type === SectionType.IMAGE" :src="(section as ImageType).src" :caption="(section as ImageType).caption" />
-          <Accordion v-if="section.type === SectionType.ACCORDION">
+          <Accordion v-if="section.type === SectionType.ACCORDION" :foot-less="!(section as AccordionType).foot">
             <template #title>{{ (section as AccordionType).title }}</template>
             <template #content>{{ (section as AccordionType).content }}</template>
             <template #foot v-if="(section as AccordionType).foot">{{ (section as AccordionType).foot }}</template>
