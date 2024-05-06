@@ -3,6 +3,7 @@ export enum SectionType {
   CALLOUT = 'callout',
   PARAGRAPH = 'paragraph',
   IMAGE = 'image',
+  ACCORDION = 'accordion',
 }
 
 export interface Callout {
@@ -23,5 +24,11 @@ export interface Image {
   src: string;
   caption?: string;
 }
+export interface Accordion {
+  type: SectionType.ACCORDION;
+  title: string;
+  content: string;
+  foot?: string;
+}
 
-export type ProjectContent = (Separator | Callout | Paragraph | Image)[]
+export type ProjectContent = (Separator | Callout | Paragraph | Image | Accordion)[]

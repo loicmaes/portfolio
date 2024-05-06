@@ -41,6 +41,15 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, ut?`,
         src: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         caption: 'Tour du bureau',
       },
+      {
+        type: SectionType.ACCORDION,
+        title: 'Qui est le plus beau ?',
+        content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        
+Expedita facilis fugit nemo perspiciatis quasi rem ullam.
+Dolore ea maiores nam nemo, quam quidem sapiente tempore?`,
+        foot: 'Posée le 6 mai 2024',
+      }
     ]
   },
   {
