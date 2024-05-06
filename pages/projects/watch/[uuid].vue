@@ -8,7 +8,7 @@ import Paragraph from "~/components/uikit/Paragraph.vue";
 import Image from "~/components/uikit/Image.vue";
 import { SectionType } from 'assets/types/projectContent.types';
 import type { Callout as CalloutType, Paragraph as ParagraphType, Image as ImageType, Accordion as AccordionType } from 'assets/types/projectContent.types';
-import Accordion from "~/components/uikit/Accordion.vue";
+import Accordion from "~/components/uikit/faq/Accordion.vue";
 
 definePageMeta({
   layout: 'project-watcher'
