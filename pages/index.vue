@@ -10,6 +10,12 @@ import {projects} from '~/assets/mocks/projects';
 import {services} from '~/assets/mocks/services';
 import {testimonials} from '~/assets/mocks/testimonials';
 import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
+
+useHead({
+  title: 'Loïc MAES · Bienvenue'
+});
+
+const projectList = computed(() => projects.slice(0, 3));
 </script>
 
 <template>
@@ -53,8 +59,8 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
         </CallToAction>
       </header>
 
-      <div class="projects--wrapper">
-        <ProjectCard class="projects--item" :uuid="uuid" :name="name" :description="description" :tags="tags" :thumbnail="thumbnail" :client="client" v-for="{ uuid, thumbnail, client, name, description, tags } in projects" :key="name" />
+      <div class="projects--wrapper" v-if="projectList.length">
+        <ProjectCard class="projects--item" :uuid="uuid" :name="name" :description="description" :tags="tags" :thumbnail="thumbnail" :client="client" v-for="{ uuid, thumbnail, client, name, description, tags } in projectList" :key="name" />
       </div>
     </section>
 

@@ -4,7 +4,10 @@ import NavigationLink from "~/components/uikit/buttons/NavigationLink.vue";
 import IconArrowRight from "~/components/uikit/icons/arrows/IconArrowRight.vue";
 
 definePageMeta({
-  layout: 'empty'
+  layout: 'empty',
+});
+useHead({
+  title: 'Loïc MAES · Mentions légales',
 });
 </script>
 

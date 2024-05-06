@@ -5,13 +5,13 @@ import {useDateFormat} from "assets/scripts/hooks/date";
 import {DateFormat} from "assets/types/dateHook.types";
 import SectionWrapper from "~/components/locals/watcher/SectionWrapper.vue";
 
-definePageMeta({
-  layout: 'without-navigation'
-});
-
 const { name, description, tags, client, thumbnail, uuid, createdAt, content } = projects.find(({ uuid }) => uuid === useRoute().params.uuid) || projects[0];
 const date    = useDateFormat(createdAt || new Date(), {
   format: DateFormat.SHORT_TEXT
+});
+
+definePageMeta({
+  layout: 'without-navigation',
 });
 
 useHead({

@@ -7,6 +7,10 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
 import IconTwoSliders from "~/components/uikit/icons/search/IconTwoSliders.vue";
 import IconArrowRight from "~/components/uikit/icons/arrows/IconArrowRight.vue";
 
+useHead({
+  title: 'Loïc MAES · Mon travail'
+})
+
 const { params } = useRoute();
 const currentPage = ref(parseInt(params.page as string ?? '1'));
 

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
 import {CtaStaticTheme} from "assets/types/callToAction.types";
+
+useHead({
+  title: 'Loïc MAES · À propos'
+})
 </script>
 
 <template>
