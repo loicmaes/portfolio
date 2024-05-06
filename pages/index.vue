@@ -85,7 +85,7 @@ const projectList = computed(() => projects.slice(0, 3));
       </div>
     </section>
 
-    <section class="section testimonials">
+    <section class="section testimonials" v-if="false"> <!-- TODO: remove later -->
       <header class="testimonials__head">
         <p class="testimonials__head--subtitle">Témoignages</p>
         <h2 class="section--title testimonials__head--title">VOUS en parlez le mieux !</h2>
