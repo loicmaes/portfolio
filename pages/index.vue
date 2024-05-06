@@ -34,7 +34,7 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
         </div>
       </div>
 
-      <div class="hero__actions">
+      <div class="hero__actions" v-if="false">
         <CallToAction>Besoin d'un développeur ?</CallToAction>
         <CallToAction :variant="CtaVariant.SECONDARY">Besoin d'un designer ?</CallToAction>
       </div>
