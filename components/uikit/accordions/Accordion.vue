@@ -32,8 +32,8 @@ defineExpose({
   <div class="accordion">
     <button class="accordion--head" @click.prevent="toggleDeploy">
       <span class="accordion--title"><slot name="title" /></span>
-      <IconMinusSign v-if="deployed" />
-      <IconPlusSign v-else />
+      <IconMinusSign :stroke-width="2" v-if="deployed" />
+      <IconPlusSign :stroke-width="2" v-else />
     </button>
     <div class="accordion--wrapper" :class="{ deployed }">
       <div class="accordion--wrapper-content">

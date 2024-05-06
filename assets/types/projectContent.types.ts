@@ -8,6 +8,11 @@ export enum SectionType {
   LIST = 'list',
 }
 
+export interface Section {
+  name: string;
+  title?: string;
+  children: SectionChild[];
+}
 export interface Callout {
   type: SectionType.CALLOUT;
   icon?: string;
@@ -42,4 +47,5 @@ export interface List {
   items: string[];
 }
 
-export type ProjectContent = (Separator | Callout | Paragraph | Image | Accordion | FAQ | List)[];
+export type SectionChild = Separator | Callout | Paragraph | Image | Accordion | FAQ | List;
+export type ProjectContent = Section[];
