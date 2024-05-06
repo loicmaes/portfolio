@@ -20,7 +20,7 @@ defineProps<Props>();
 
 <template>
   <div class="section-child">
-    <hr class="project--separator" v-if="child.type === SectionType.SEPARATOR" />
+    <hr class="section-child--separator" v-if="child.type === SectionType.SEPARATOR" />
     <Callout v-if="child.type === SectionType.CALLOUT">
       <template #content>{{ (child as T_Callout).content }}</template>
     </Callout>
@@ -40,5 +40,7 @@ defineProps<Props>();
 </template>
 
 <style scoped lang="sass">
-
+.section-child
+  &--separator
+    @apply border-woodsmoke-200 dark:border-woodsmoke-800
 </style>

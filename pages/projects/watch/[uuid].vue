@@ -99,10 +99,9 @@ if (process.browser) {
   &--thumbnail
     @apply h-52 md:h-64 lg:h-96 w-full object-cover object-center
 
-  &--separator
-    @apply border-woodsmoke-200 dark:border-woodsmoke-400
-
 .head
+  @apply -mb-16 lg:-mb-12
+
   &__tags
     @apply mt-4 flex flex-wrap gap-2
 
@@ -110,7 +109,7 @@ if (process.browser) {
       @apply text-xs text-woodsmoke-300 py-2 px-3 bg-woodsmoke-100 dark:bg-woodsmoke-800 rounded-lg
 
   &--title
-    @apply w-max max-w-full pt-8 pb-4 text-4xl lg:text-5xl 2xl:text-6xl font-black bg-gradient-to-r from-woodsmoke-950 dark:from-woodsmoke-0 to-woodsmoke-500 dark:to-woodsmoke-400 text-transparent bg-clip-text
+    @apply w-max max-w-full pt-8 pb-4 text-5xl lg:text-6xl 2xl:text-7xl font-black bg-gradient-to-r from-woodsmoke-950 dark:from-woodsmoke-0 to-woodsmoke-500 dark:to-woodsmoke-400 text-transparent bg-clip-text
 
   &--description
     @apply leading-loose text-woodsmoke-500
