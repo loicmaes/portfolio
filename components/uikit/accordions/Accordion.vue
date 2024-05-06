@@ -65,7 +65,7 @@ defineExpose({
     @apply mb-4 border-[1px] border-woodsmoke-100 dark:border-woodsmoke-900
 
   &--content
-    @apply mx-8 text-woodsmoke-400 whitespace-pre-line mb-4
+    @apply text-justify mx-8 text-woodsmoke-400 whitespace-pre-line mb-4
 
   &--foot
     @apply text-woodsmoke-200 dark:text-woodsmoke-800 mr-8 self-end mb-4

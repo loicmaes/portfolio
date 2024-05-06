@@ -23,5 +23,5 @@ defineProps<Props>();
     @apply mb-4 font-extrabold text-2xl lg:text-3xl 2xl:text-4xl
 
   &--content
-    @apply leading-loose text-woodsmoke-700 dark:text-woodsmoke-300 whitespace-pre-line
+    @apply text-justify leading-loose text-woodsmoke-700 dark:text-woodsmoke-300 whitespace-pre-line
 </style>
