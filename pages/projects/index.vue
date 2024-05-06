@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Pagination from "~/components/uikit/Pagination.vue";
+import Pagination from "~/components/uikit/paginations/Pagination.vue";
 import {projects} from "assets/mocks/projects";
 import ProjectCard from "~/components/locals/home/projects/ProjectCard.vue";
 import CallToAction from "~/components/uikit/buttons/CallToAction.vue";
