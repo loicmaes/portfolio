@@ -1,3 +1,5 @@
+import type {ProjectContent} from "assets/types/projectContent.types";
+
 export interface ProjectThumbnail {
   src: string;
   alt?: string;
@@ -14,4 +16,5 @@ export interface Project {
   thumbnail: ProjectThumbnail;
   client: ProjectClient;
   createdAt?: Date;
+  content: ProjectContent;
 }

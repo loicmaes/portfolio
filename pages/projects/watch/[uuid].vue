@@ -3,12 +3,20 @@ import {projects} from "assets/mocks/projects";
 import IconArrowLeft from "~/components/uikit/icons/arrows/IconArrowLeft.vue";
 import {useDateFormat} from "assets/scripts/hooks/date";
 import {DateFormat} from "assets/types/dateHook.types";
+import Callout from "~/components/uikit/Callout.vue";
+import Paragraph from "~/components/uikit/Paragraph.vue";
+import Image from "~/components/uikit/Image.vue";
+import { SectionType } from 'assets/types/projectContent.types';
+import type { Callout as CalloutType, Paragraph as ParagraphType, Image as ImageType, Accordion as AccordionType, FAQ as FAQType, List as ListType } from 'assets/types/projectContent.types';
+import Accordion from "~/components/uikit/accordions/Accordion.vue";
+import FAQ from "~/components/uikit/accordions/AccordionGroup.vue";
+import ListRender from "~/components/uikit/list/ListRender.vue";
 
 definePageMeta({
   layout: 'project-watcher'
 });
 
-const { name, description, tags, client, thumbnail, uuid, createdAt } = projects.find(({ uuid }) => uuid === useRoute().params.uuid) || projects[0];
+const { name, description, tags, client, thumbnail, uuid, createdAt, content } = projects.find(({ uuid }) => uuid === useRoute().params.uuid) || projects[0];
 const date    = useDateFormat(createdAt || new Date(), {
   format: DateFormat.SHORT_TEXT
 });
@@ -71,9 +79,24 @@ if (process.browser) {
           <p class="head--description">{{ description }}</p>
         </section>
 
-        <hr class="project--separator" />
-
-        <section class="project__section outline outline-red-500 p-12"></section>
+        <section class="project__section" v-for="(section, index) in content" :key="`section-${index}`">
+          <hr class="project--separator" v-if="section.type === SectionType.SEPARATOR" />
+          <Callout v-if="section.type === SectionType.CALLOUT">
+            <template #content>{{ (section as CalloutType).content }}</template>
+          </Callout>
+          <Paragraph v-if="section.type === SectionType.PARAGRAPH" :no-title="!(section as ParagraphType).title">
+            <template #title v-if="(section as ParagraphType).title">{{ (section as ParagraphType).title }}</template>
+            <template #content>{{ (section as ParagraphType).content }}</template>
+          </Paragraph>
+          <Image v-if="section.type === SectionType.IMAGE" :src="(section as ImageType).src" :caption="(section as ImageType).caption" />
+          <Accordion v-if="section.type === SectionType.ACCORDION" :foot-less="!(section as AccordionType).foot">
+            <template #title>{{ (section as AccordionType).title }}</template>
+            <template #content>{{ (section as AccordionType).content }}</template>
+            <template #foot v-if="(section as AccordionType).foot">{{ (section as AccordionType).foot }}</template>
+          </Accordion>
+          <FAQ v-if="section.type === SectionType.FAQ" :questions="(section as FAQType).questions" />
+          <ListRender v-if="section.type === SectionType.LIST" :items="(section as ListType).items" :ordered="(section as ListType).ordered" />
+        </section>
       </div>
     </main>
   </article>
@@ -113,5 +136,5 @@ if (process.browser) {
     @apply w-max max-w-full pt-8 pb-4 text-4xl lg:text-5xl 2xl:text-6xl font-black bg-gradient-to-r from-woodsmoke-950 dark:from-woodsmoke-0 to-woodsmoke-500 dark:to-woodsmoke-400 text-transparent bg-clip-text
 
   &--description
-    @apply text-woodsmoke-500 dark:text-woodsmoke-500
+    @apply leading-loose text-woodsmoke-500
 </style>
