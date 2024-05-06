@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Accordion from "~/components/uikit/faq/Accordion.vue";
+import Accordion from "~/components/uikit/accordions/Accordion.vue";
 import {type Accordion as AccordionType, SectionType} from "assets/types/projectContent.types";
 
 interface Props {
