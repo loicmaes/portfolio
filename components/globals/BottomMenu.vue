@@ -35,7 +35,7 @@ import IconEnvelope from "~/components/uikit/icons/contact/IconEnvelope.vue";
       <ul class="footer__hero--wrapper">
         <li class="footer__hero--item">
           <IconMapPin class="footer__hero--item-icon" />
-          <NavigationLink to="#" class="" external>21 rue Vincent Scotto,<br>67400, Illkirch-Graffenstaden<br>FRANCE</NavigationLink>
+          <NavigationLink to="https://maps.app.goo.gl/iawjah5df4ahm9mQ6" class="" external>21 rue Vincent Scotto,<br>67400, Illkirch-Graffenstaden<br>FRANCE</NavigationLink>
         </li>
         <li class="footer__hero--item">
           <IconPhone class="footer__hero--item-icon" />
@@ -66,7 +66,7 @@ import IconEnvelope from "~/components/uikit/icons/contact/IconEnvelope.vue";
     <BottomMenuSection id="section-3">
       <template #title>Documents</template>
       <template #content>
-        <NavigationLink to="">Mentions légales</NavigationLink>
+        <NavigationLink to="/legal/legal-mentions">Mentions légales</NavigationLink>
         <NavigationLink to="">Curiculum Vitae</NavigationLink>
       </template>
     </BottomMenuSection>
