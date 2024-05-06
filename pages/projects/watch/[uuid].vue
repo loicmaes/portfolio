@@ -6,7 +6,7 @@ import {DateFormat} from "assets/types/dateHook.types";
 import SectionWrapper from "~/components/locals/watcher/SectionWrapper.vue";
 
 definePageMeta({
-  layout: 'project-watcher'
+  layout: 'without-navigation'
 });
 
 const { name, description, tags, client, thumbnail, uuid, createdAt, content } = projects.find(({ uuid }) => uuid === useRoute().params.uuid) || projects[0];
