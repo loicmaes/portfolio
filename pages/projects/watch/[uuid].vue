@@ -69,7 +69,6 @@ if (process.browser) {
           </ul>
 
           <h1 class="head--title">{{ name }}</h1>
-          <p class="head--description">{{ description }}</p>
         </section>
 
         <section class="project__section" v-for="(section, index) in content" :key="`section-${index}`">
