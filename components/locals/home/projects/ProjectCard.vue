@@ -6,7 +6,7 @@ defineProps<Project>();
 
 <template>
   <article class="card">
-    <img :src="thumbnail.src" :alt="thumbnail.alt ?? ''" class="card--thumbnail" />
+    <NuxtImg :src="thumbnail.src" :alt="thumbnail.alt ?? ''" class="card--thumbnail" />
 
     <p class="card--client">{{ client.name }} · {{ client.country }}</p>
     <h3 class="card--title">{{ name }}</h3>

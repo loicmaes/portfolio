@@ -60,7 +60,7 @@ if (process.browser) {
     </header>
 
     <main class="project--wrapper">
-      <img :src="thumbnail.src" :alt="thumbnail.alt ?? ''" ref="thumbnailRef" class="project--thumbnail">
+      <NuxtImg :src="thumbnail.src" :alt="thumbnail.alt ?? ''" ref="thumbnailRef" class="project--thumbnail" />
 
       <div class="project--container">
         <section class="project__section head">

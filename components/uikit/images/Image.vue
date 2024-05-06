@@ -9,7 +9,7 @@ defineProps<Props>();
 
 <template>
   <figure class="image">
-    <img :src="src" alt="" class="image--img" />
+    <NuxtImg :src="src" alt="" class="image--img" />
     <figcaption class="image--caption" v-if="caption">{{ caption }}</figcaption>
   </figure>
 </template>
