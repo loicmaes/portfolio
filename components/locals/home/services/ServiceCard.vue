@@ -26,7 +26,7 @@ defineProps<Service>();
       </ul>
     </main>
 
-    <footer class="card__foot">
+    <footer class="card__foot" v-if="false"> <!-- TODO: remove statement -->
       <CallToAction class="card__foot--cta" :icon-position="CtaIconPosition.RIGHT" :to="`/contact/service/${id}`">
         <span>Prendre contact</span>
         <IconArrowRight />
