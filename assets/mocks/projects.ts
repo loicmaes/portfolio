@@ -49,6 +49,21 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, ut?`,
 Expedita facilis fugit nemo perspiciatis quasi rem ullam.
 Dolore ea maiores nam nemo, quam quidem sapiente tempore?`,
         foot: 'Posée le 6 mai 2024',
+      },
+      {
+        type: SectionType.FAQ,
+        questions: [
+          {
+            type: SectionType.ACCORDION,
+            title: 'Qui est le plus beau ?',
+            content: 'Loïc MAES bien sûr !',
+          },
+          {
+            type: SectionType.ACCORDION,
+            title: 'Où prodiguez-vous vos services ?',
+            content: 'Dans le monde entirer (en distanciel bien évidemment).',
+          }
+        ]
       }
     ]
   },

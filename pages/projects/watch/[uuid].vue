@@ -7,8 +7,9 @@ import Callout from "~/components/uikit/Callout.vue";
 import Paragraph from "~/components/uikit/Paragraph.vue";
 import Image from "~/components/uikit/Image.vue";
 import { SectionType } from 'assets/types/projectContent.types';
-import type { Callout as CalloutType, Paragraph as ParagraphType, Image as ImageType, Accordion as AccordionType } from 'assets/types/projectContent.types';
+import type { Callout as CalloutType, Paragraph as ParagraphType, Image as ImageType, Accordion as AccordionType, FAQ as FAQType } from 'assets/types/projectContent.types';
 import Accordion from "~/components/uikit/faq/Accordion.vue";
+import FAQ from "~/components/uikit/faq/FAQ.vue";
 
 definePageMeta({
   layout: 'project-watcher'
@@ -92,6 +93,7 @@ if (process.browser) {
             <template #content>{{ (section as AccordionType).content }}</template>
             <template #foot v-if="(section as AccordionType).foot">{{ (section as AccordionType).foot }}</template>
           </Accordion>
+          <FAQ v-if="section.type === SectionType.FAQ" :questions="(section as FAQType).questions" />
         </section>
       </div>
     </main>
