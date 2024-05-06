@@ -64,6 +64,23 @@ Dolore ea maiores nam nemo, quam quidem sapiente tempore?`,
             content: 'Dans le monde entirer (en distanciel bien évidemment).',
           }
         ]
+      },
+      {
+        type: SectionType.LIST,
+        items: [
+            'Un',
+            'Deux',
+            'Quatre'
+        ]
+      },
+      {
+        type: SectionType.LIST,
+        ordered: true,
+        items: [
+            'Huit',
+            'Dix',
+            'Douze',
+        ]
       }
     ]
   },

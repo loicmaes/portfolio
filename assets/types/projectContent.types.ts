@@ -5,6 +5,7 @@ export enum SectionType {
   IMAGE = 'image',
   ACCORDION = 'accordion',
   FAQ = 'faq',
+  LIST = 'list',
 }
 
 export interface Callout {
@@ -35,5 +36,10 @@ export interface FAQ {
   type: SectionType.FAQ;
   questions: Accordion[];
 }
+export interface List {
+  type: SectionType.LIST;
+  ordered?: boolean;
+  items: string[];
+}
 
-export type ProjectContent = (Separator | Callout | Paragraph | Image | Accordion | FAQ)[];
+export type ProjectContent = (Separator | Callout | Paragraph | Image | Accordion | FAQ | List)[];
