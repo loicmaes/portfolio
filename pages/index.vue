@@ -40,7 +40,7 @@ import {CtaIconPosition, CtaVariant} from "assets/types/callToAction.types";
       </div>
     </section>
 
-    <section class="section projects">
+    <section class="section projects" v-if="projects.length">
       <header class="projects__head">
         <div class="projects__head--wrapper">
           <h2 class="section--title projects__head--title">Projets récents</h2>
