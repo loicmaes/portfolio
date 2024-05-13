@@ -16,7 +16,7 @@ export const projects: Project[] = [
     tags: [
         'École',
         'Personnel',
-        'Full-Stack'
+        'Dev. Full-Stack'
     ],
     content: [
       {
@@ -133,5 +133,72 @@ En choisissant PostgreSQL avec Prisma pour la gestion de la base de données de 
       }
     ],
     createdAt: new Date(2024, 2, 27)
+  },
+  {
+    uuid: 'frontkit-nouvelle-bibliotheque-de-composants',
+    name: 'FrontKit - Nouvelle bibliothèque de composants',
+    description: 'Un nouveau projet en cette année 2024 : Créons ensemble une nouvelle bibliothèque de composant à mettre à disposition au public. Je réalise enfin mon rêve : mettre un SaaS à disposition de tous !',
+    thumbnail: {
+      src: 'https://images.unsplash.com/photo-1584428018260-1a9bc0e15365?q=80&w=2811&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    client: {
+      name: 'Loïc MAES',
+      country: 'France',
+    },
+    tags: [
+        'Personnel',
+        'Web design',
+        'Dev. Front-End',
+    ],
+    content: [
+      {
+        name: 'description',
+        children: [
+          {
+            type: SectionType.PARAGRAPH,
+            content: "C'est en ce 13 mai 2024 que se lance mon tout premier projet concret de développement de SaaS. Aujourd'hui je vous présente donc FrontKit, une nouvelle bibliothèque de composants à copier-coller pour vos prochains projets Vue.JS ou Nuxt.JS. De nouvelles versions sauront arriver petit à petit afin d'évoluer sur d'autres frameworks comme React ou Next, Svelte et j'en passe. Suivez-moi dans cette aventure où je développe avec vous ma solution web et découvrez toutes les étapes de conceptions, ainsi que les erreurs que je pourrais faire tout au long de cette première expérience de Solo-preneur !",
+          },
+          {
+            type: SectionType.CALLOUT,
+            content: "Cette page est susceptible d'évoluer dans le temps. Toutes les informations peuvent être inexacte et corrigées dans les versions futures."
+          }
+        ]
+      },
+      {
+        name: '-',
+        children: [
+          {
+            type: SectionType.SEPARATOR,
+          }
+        ]
+      },
+      {
+        name: 'content',
+        title: 'Au programme',
+        children: [
+          {
+            type: SectionType.PARAGRAPH,
+            content: "Pleins de bonnes choses sont au programme de ce nouveau projet. Dans mes lives (Twitch) et vidéos (YouTube, Instagram, etc...), vous retrouverez :",
+          },
+          {
+            type: SectionType.LIST,
+            items: [
+                "la conception graphique des composants ;",
+                "la réalisation des assets graphiques ;",
+                "la publication sur le Marketplace de Figma ;",
+                "le développement front-end ;",
+                "la mise en ligne du module NPM ;",
+                "la conception du site vitrine ;",
+                "et l'intégration et mise en ligne du site vitrine."
+            ]
+          },
+          {
+            type: SectionType.PARAGRAPH,
+            content: "J'espère que vous êtes prêt, ce projet risque d'être long !"
+          }
+        ]
+      }
+    ],
+    createdAt: new Date(2024, 4, 13),
   }
 ];
