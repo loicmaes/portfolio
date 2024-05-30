@@ -2,7 +2,7 @@
 Welcome to the GitHub repository of my personal portfolio frontend! This project aims to create an online showcase to present my skills, projects, and professional background.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This project is licensed under the CC-BY-NC-ND 4.0 License. See the [LICENSE](LICENSE) file for more information.
 
 ## Technical Stack
 This frontend has been developed using the following technologies:
